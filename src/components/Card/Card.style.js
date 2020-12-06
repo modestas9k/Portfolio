@@ -5,7 +5,14 @@ export const Card = styled.div`
   display: flex;
   padding: 2em;
   border-radius: 20px;
-  background: white;
+  border-bottom: 3px solid #d3f3ee;
+  border-right: 2px solid #d3f3ee;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    305deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
   box-shadow: ${(prop) =>
     prop.color ? theme.boxShadow[prop.color].boxShadow : "#eee"};
 
@@ -21,12 +28,23 @@ export const Card = styled.div`
 export const Colum1 = styled.div`
   flex: 2;
   padding: 1em;
+  padding-right: 2em;
+  @media (max-width: 890px) {
+    padding: 1em;
+    padding-right: 0;
+  }
+  @media (max-width: 670px) {
+    flex-direction: column;
+    padding: 1em;
+  }
 `;
 
 export const Img = styled.img`
   width: 100%;
   border-radius: 20px;
-  box-shadow: 17px 17px 34px #d9d9d9, -17px -17px 34px #ffffff;
+  box-sizing: border-box;
+  border-bottom: 3px solid ${theme.colors.cyan};
+  border-right: 2px solid ${theme.colors.cyan};
 `;
 export const Colum2 = styled.div`
   flex: 1;
