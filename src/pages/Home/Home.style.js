@@ -40,7 +40,15 @@ export const P = styled.p`
 export const Strong = styled.strong`
   font-weight: 600;
 `;
-
+export const aLink = styled.a`
+  color: whitesmoke;
+  text-decoration: none;
+  transition: all 0.4s;
+  display: inline-block;
+  &:hover {
+    color: ${theme.colors.yellow};
+  }
+`;
 export const PhotoLink = styled.div`
   position: absolute;
   bottom: 0;
