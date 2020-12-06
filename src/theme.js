@@ -6,6 +6,7 @@ const theme = {
     orange: "#f4a261",
     red: "#e76f51",
     black: "#161a1d",
+    cyan: "#D3F3EE",
   },
   boxShadow: {
     green: {
