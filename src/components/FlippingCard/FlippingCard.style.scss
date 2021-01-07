@@ -1,0 +1,159 @@
+.flipp__container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.flippCard {
+  position: relative;
+  width: 400px;
+  height: 240px;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+
+  &.flipped {
+    transform: rotateY(180deg);
+
+    .flippCard__front-side {
+      background-position: left top;
+      transition-delay: 0s;
+    }
+    .flippCard__back-side {
+      background-position: right bottom;
+      transition-delay: 0.25s;
+    }
+  }
+  .flippCard__side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    //backface-visibility: hidden;
+    transition: background-position 0.6s ease;
+    //padding: 20px;
+  }
+
+  .flippCard__front-side {
+    transform: translateZ(1px);
+    transition-delay: 0.3s;
+    background: white;
+    background: radial-gradient(circle, #ffe5e573, transparent) right
+        bottom/200% 200% no-repeat,
+      linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    padding-left: 20px;
+    letter-spacing: 1px;
+
+    .chip-box {
+      margin-top: 80px;
+      display: flex;
+      img {
+        width: 40px;
+      }
+      div {
+        padding: 5px 10px;
+      }
+    }
+    h2 {
+      letter-spacing: 3px;
+      font-size: 2em;
+      font-family: "Big Shoulders Stencil Text";
+      margin: 5px 0 0 0;
+      color: rgb(19, 19, 19);
+    }
+    .card-logo {
+      width: 200px;
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+    .card-holder-name {
+      position: absolute;
+      bottom: 20px;
+
+      text-transform: uppercase;
+
+      color: rgba($color: rgb(31, 31, 31), $alpha: 0.8);
+    }
+    .exp-date {
+      width: 60px;
+      margin: 0 auto;
+      span {
+        font-size: 0.4em;
+        text-transform: uppercase;
+        font-family: "Big Shoulders Stencil Text";
+      }
+      .month_year {
+        margin-left: 16px;
+      }
+      div {
+        display: flex;
+        p {
+          font-size: 1em;
+          margin: 0 auto;
+          width: min-content;
+          line-height: 1em;
+          font-family: "Big Shoulders Stencil Text";
+          margin-left: 5px;
+        }
+      }
+    }
+    .wifi_logo {
+      transform: rotateZ(90deg);
+      position: absolute;
+      right: 20px;
+      top: 100px;
+      font-size: 1.4em;
+      color: rgb(219, 99, 0);
+    }
+    .mastercard_logo {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 60px;
+    }
+  }
+
+  .flippCard__back-side {
+    transform: rotateY(180deg);
+    background: radial-gradient(circle, #ffffff7c, transparent) left top/200%
+        200% no-repeat,
+      linear-gradient(to right, #f9d423 0%, #f83600 90%);
+
+    .text {
+      padding: 2px 10px;
+      font-size: 0.6em;
+    }
+    .gold_line {
+      width: 400px;
+      height: 50px;
+      background: rgba(139, 118, 0, 0.692);
+    }
+    .signature_box {
+      background: rgba(177, 177, 177, 0.747);
+      margin-left: 10px;
+      padding: 10px;
+      width: 70%;
+      text-align: end;
+    }
+    .card_bottom {
+      display: flex;
+      p {
+        font-size: 0.6em;
+        margin: 30px 15px 20px 15px;
+      }
+    }
+    .debit_logo {
+      width: 50px;
+      margin: 20px 10px;
+    }
+  }
+}
