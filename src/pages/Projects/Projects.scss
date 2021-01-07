@@ -1,0 +1,37 @@
+.project__main {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  min-height: 100vh;
+}
+.project__head {
+  text-align: center;
+  padding-top: 100px;
+  h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    color: whitesmoke;
+  }
+}
+.project__buttons {
+  margin: 40px;
+
+  button {
+    padding: 20px 40px;
+    letter-spacing: 1px;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    background: transparent;
+    transition: 0.4s ease;
+
+    &:hover {
+      background: #16a085;
+      border: 2px solid #16a085;
+      transition: 0.4s ease;
+      // border-bottom: 3px solid #29b6f6;
+      // transition: border-bottom 0.5s ease-in-out;
+    }
+  }
+  .btn_active {
+    background: #16a085;
+    border: 2px solid #16a085;
+  }
+}
