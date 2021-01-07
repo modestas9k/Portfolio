@@ -5,6 +5,7 @@ import "normalize.css";
 import GlobalStyle from "./global";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import "font-awesome/css/font-awesome.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
