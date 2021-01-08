@@ -42,8 +42,8 @@ function FlippingCard() {
         </div>
         <div className="flippCard__side flippCard__back-side">
           <span className="text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
-            recusandae blanditiis.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit
+            adipisicing.
           </span>
           <div className="gold_line"></div>
           <span className="text">AUTHORIZED SIGNATURE</span>
