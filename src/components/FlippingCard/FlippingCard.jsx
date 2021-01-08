@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FlippingCard.style.scss";
+import chip from "./../../assets/card_chip.png";
 
 function FlippingCard() {
   const [toggle, setToggle] = useState(false);
@@ -16,10 +17,7 @@ function FlippingCard() {
             alt="logo"
           />
           <div className="chip-box">
-            <img
-              src="https://img.pngio.com/chip-png-free-download-fourjayorg-chip-png-2400_2400.png"
-              alt="chip"
-            />
+            <img src={chip} alt="chip" />
             <div>debit</div>
           </div>
           <h2>5167 9620 0000 0000</h2>
