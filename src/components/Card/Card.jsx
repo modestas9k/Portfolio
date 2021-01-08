@@ -1,20 +1,40 @@
 import React from "react";
-import * as S from "./Card.style";
+import "./Card.scss";
 
-function Card({ img, alt, title, description, children, color }) {
+function Card({ img, alt, title, description, gitHub, website, chips }) {
   return (
-    <S.Card color={color}>
-      <S.Colum1>
-        <S.Img src={img} alt={alt} />
-      </S.Colum1>
-      <S.Colum2>
-        <S.Text>
-          <S.Title>{title}</S.Title>
-          <S.Description>{description}</S.Description>
-        </S.Text>
-        <S.LinkWrapper>{children}</S.LinkWrapper>
-      </S.Colum2>
-    </S.Card>
+    <div className="card__wrapper">
+      <div className="card">
+        <div className="card__image-box">
+          {img && <img src={img} alt={alt} />}
+        </div>
+        <div className="card__text-box">
+          <h2>{title}</h2>
+          <article>{description}</article>
+          <div className="card__chip-box">
+            {chips &&
+              chips.map((chip) => {
+                return (
+                  <div className="card__chip" key={chip}>
+                    {chip}
+                  </div>
+                );
+              })}
+          </div>
+          <div className="card__text-box--buttons">
+            {gitHub && (
+              <button onClick={() => window.open(gitHub)}>
+                <i className="fa fa-github" aria-hidden="true"></i>
+                GitHub
+              </button>
+            )}
+            {website && (
+              <button onClick={() => window.open(website)}>Website</button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
