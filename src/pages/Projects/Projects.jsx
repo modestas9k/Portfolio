@@ -22,7 +22,7 @@ function Projects() {
               setOneDays(false);
             }}
           >
-            Course stuff
+            Course Projects
           </button>
           <button
             className={oneDays ? "btn_active" : ""}
@@ -31,7 +31,7 @@ function Projects() {
               setCourseStuff(false);
             }}
           >
-            One day challenge
+            One-Day Challenges
           </button>
         </div>
       </div>

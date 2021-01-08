@@ -11,7 +11,7 @@ function Home() {
           <h1>
             Hello, I'm <strong>Modestas Skirius</strong>.
           </h1>
-          <h1>I'm a junior front-end developer</h1>
+          <h1>Front-End Developer</h1>
           <button onClick={() => history.push("/projects")}>
             View my work{" "}
             <i className="fa fa-arrow-right" aria-hidden="true"></i>
