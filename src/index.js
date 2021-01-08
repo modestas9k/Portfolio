@@ -2,17 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Routes from "./Routes";
 import "normalize.css";
-import GlobalStyle from "./global";
-import { ThemeProvider } from "styled-components";
-import theme from "./theme";
+
 import "font-awesome/css/font-awesome.min.css";
+import "./../src/scss/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
+    <Routes />
   </React.StrictMode>,
   document.getElementById("root")
 );
