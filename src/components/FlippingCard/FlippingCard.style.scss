@@ -155,12 +155,14 @@
     }
   }
   .debit_logo {
-    width: 50px;
+    width: 100%;
+    max-width: 50px;
+    max-height: 50px;
     margin: 20px 10px;
   }
   @media (max-width: 360px) {
     .debit_logo {
-      margin: 10px;
+      margin: 5px 10px;
     }
     .card_bottom p {
       margin: 10px 15px 5px 15px;
