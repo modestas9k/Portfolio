@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import { useHistory } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Home() {
   const history = useHistory();
@@ -13,8 +14,7 @@ function Home() {
           </h1>
           <h1>Front-End Developer</h1>
           <button onClick={() => history.push("/projects")}>
-            View my work{" "}
-            <i className="fa fa-arrow-right" aria-hidden="true"></i>
+            View my work <FontAwesomeIcon icon={["fas", "arrow-right"]} />
           </button>
         </div>
       </section>
