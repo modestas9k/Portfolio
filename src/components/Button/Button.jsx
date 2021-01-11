@@ -2,26 +2,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Button.scss";
 
-function Button({ text, type }) {
+function Button({ text, type, handleClick, className }) {
   switch (type) {
     case "primary":
-      return <button className="primary">{text}</button>;
+      return (
+        <button onClick={handleClick} className="primary">
+          <div id="slide"></div>
+          {text}
+        </button>
+      );
 
     case "transparent":
-      return <button className="transparent">{text}</button>;
+      return (
+        <button onClick={handleClick} className="transparent">
+          {text}
+        </button>
+      );
 
     case "gitHub":
       return (
-        <button className="gitHub">
-          <p>
-            <FontAwesomeIcon icon={["fab", "github"]} />
-          </p>{" "}
+        <button onClick={handleClick} className="gitHub">
+          <FontAwesomeIcon icon={["fab", "github"]} />
           {text}
         </button>
       );
 
     default:
-      return <button>{text}</button>;
+      return (
+        <button className="default" onClick={handleClick}>
+          {text}
+        </button>
+      );
   }
 }
 export default Button;

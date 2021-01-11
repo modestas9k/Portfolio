@@ -2,9 +2,11 @@
 
 button {
   padding: 10px 20px;
+  box-sizing: border-box;
   transition: 0.4s ease;
   letter-spacing: 1px;
   border: none;
+  border-radius: 3px;
   background: #ddd;
   &:hover {
     background: darken(#ddd, 10%);
@@ -14,15 +16,41 @@ button {
 .primary {
   color: $white-color;
   background: $primary-color;
+  border: none;
 
   &:hover {
-    background: lighten($primary-color, 10%);
+    background: lighten($primary-color, 5%);
   }
 }
 .transparent {
   background: transparent;
+  border: 1px solid $white-color;
+  color: $white-color;
+  &:hover {
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+  }
 }
 .gitHub {
-  background: #4078c0;
+  background: transparent;
+  border: none;
   color: #fafafa;
+  svg {
+    margin-right: 8px;
+  }
+  &:hover {
+    background: $primary-color;
+  }
+}
+.default {
+  background: transparent;
+  border: none;
+  color: #fafafa;
+  svg {
+    margin-right: 8px;
+  }
+  &:hover {
+    background: $primary-color;
+  }
 }
