@@ -7,10 +7,11 @@ function Header() {
   return (
     <div className="header__container">
       <nav>
-        <div className="nav__logo">
+        <Link to="/" className="nav__logo">
           <FontAwesomeIcon icon={["fab", "medium"]} />
-        </div>
-        <div>
+        </Link>
+
+        <div className="nav__links">
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/about">About</Link>

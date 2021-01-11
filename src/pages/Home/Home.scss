@@ -10,42 +10,4 @@
   strong {
     color: #16a085;
   }
-  button {
-    padding: 10px 20px;
-    border: 2px solid whitesmoke;
-    background: transparent;
-    color: whitesmoke;
-    transition: 0.4s ease;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    i {
-      font-weight: 100;
-      margin-left: 10px;
-      transition: 0.4s ease;
-    }
-
-    &:hover {
-      background: #16a085;
-      border: 2px solid #16a085;
-      transition: 0.4s ease;
-      i {
-        transform: rotate(90deg);
-        transition: 0.4s ease;
-      }
-    }
-  }
-  // .button_svg {
-  //   background: url(./../../assets/right-arrow.svg);
-  //   width: 25px;
-  //   height: 15px;
-  //   i {
-  //     font-size: 2em;
-  //   }
-  // }
-  // button:after {
-  //   content: "";
-  //   background: url(./../../assets/right-arrow.svg);
-  //   color: yellowgreen;
-  //   width: 10px;
-  // }
 }

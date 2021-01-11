@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
+import { Button } from "./../../components";
 import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Home() {
   const history = useHistory();
@@ -13,9 +13,11 @@ function Home() {
             Hello, I'm <strong>Modestas Skirius</strong>.
           </h1>
           <h1>Front-End Developer</h1>
-          <button onClick={() => history.push("/projects")}>
-            View my work <FontAwesomeIcon icon={["fas", "arrow-right"]} />
-          </button>
+          <Button
+            text="View my work"
+            type="primary"
+            handleClick={() => history.push("/projects")}
+          />
         </div>
       </section>
     </>

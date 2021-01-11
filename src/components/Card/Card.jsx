@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "./../../components";
 
 function Card({ img, alt, title, description, gitHub, website, chips }) {
   return (
@@ -24,13 +24,18 @@ function Card({ img, alt, title, description, gitHub, website, chips }) {
           </div>
           <div className="card__text-box--buttons">
             {gitHub && (
-              <button onClick={() => window.open(gitHub)}>
-                <FontAwesomeIcon icon={["fab", "github"]} />
-                GitHub
-              </button>
+              <Button
+                type="gitHub"
+                text="GitHub"
+                handleClick={() => window.open(gitHub)}
+              />
             )}
             {website && (
-              <button onClick={() => window.open(website)}>Website</button>
+              <Button
+                text="Website"
+                type="default"
+                handleClick={() => window.open(website)}
+              />
             )}
           </div>
         </div>
