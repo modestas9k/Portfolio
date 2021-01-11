@@ -1,0 +1,47 @@
+@import "./../../scss/variables";
+
+.about {
+  width: 100%;
+  padding-top: 50px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__main {
+  display: flex;
+  max-width: 960px;
+  height: 80vh;
+  margin: 0 20px;
+}
+.about__main--text-box {
+  flex: 1;
+
+  color: $white-color;
+  h1 {
+    font-weight: 900;
+  }
+  article {
+    line-height: 1.4em;
+    color: darken($white-color, 10%);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+.about__main--image-box {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url("./../../assets/me.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 200px;
+  min-height: 200px;
+}
+@media (max-width: 600px) {
+  .about__main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) and (min-width: 400px) {
+}
