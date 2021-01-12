@@ -1,7 +1,29 @@
 @import "variables";
 
 body {
-  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: Rubik, sans-serif;
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    color: $white-color;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  p,
+  article {
+    color: darken($white-color, 10%);
+    line-height: 1.65em;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
 }
 html {
   background: $black-color;

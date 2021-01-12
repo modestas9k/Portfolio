@@ -28,17 +28,7 @@
   min-width: 200px;
   flex: 1;
   padding-left: 20px;
-  h2 {
-    color: whitesmoke;
-    letter-spacing: 1px;
-    margin-top: 0;
-  }
-  article {
-    color: darken($color: #ffffff, $amount: 10%);
-    line-height: 1.4em;
-    font-weight: lighter;
-    margin-bottom: 10px;
-  }
+
   @media (max-width: 750px) {
     padding: 0;
   }

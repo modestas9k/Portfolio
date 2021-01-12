@@ -56,6 +56,12 @@ function About() {
           >
             <FontAwesomeIcon icon={["fab", "instagram"]} />
           </button>
+          <button
+            className="about__btn-mail"
+            onClick={() => window.open("mailto:modestas.skirius@gmail.com")}
+          >
+            <FontAwesomeIcon icon={["far", "envelope"]} />
+          </button>
         </div>
       </div>
     </div>

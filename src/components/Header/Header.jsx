@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import logo from "./../../assets/logo.png";
 
 function Header() {
   return (
     <div className="header__container">
       <nav>
         <Link to="/" className="nav__logo">
-          <FontAwesomeIcon icon={["fab", "medium"]} />
+          <img src={logo} alt="logo" />
         </Link>
 
         <div className="nav__links">
