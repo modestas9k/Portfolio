@@ -3,6 +3,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 // import your icons
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faMedium, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faMedium,
+  faGithub,
+  faFacebookF,
+  faLinkedinIn,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
-library.add(faMedium, faGithub, faArrowRight);
+library.add(
+  faMedium,
+  faGithub,
+  faArrowRight,
+  faFacebookF,
+  faLinkedinIn,
+  faInstagram
+);

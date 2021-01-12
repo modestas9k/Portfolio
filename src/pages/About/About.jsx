@@ -1,6 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./About.scss";
-import me from "./../../assets/me.jpg";
 
 function About() {
   return (
@@ -18,9 +18,44 @@ function About() {
             things.
           </article>
         </div>
-        <div className="about__main--image-box">
-          <div></div>
-          {/* <img src={me} alt="me" /> */}
+        <div className="about__main--image-box"></div>
+      </div>
+      <div className="about__foot">
+        <h3>Contact me </h3>
+        <div className="about__line"></div>
+        <div className="about__buttons">
+          <button
+            className="about__btn-fb"
+            onClick={() =>
+              window.open("https://www.facebook.com/modestas.skirius/")
+            }
+          >
+            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
+          </button>
+          <button
+            className="about__btn-linkedin"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/modestas-skirius-276631202/"
+              )
+            }
+          >
+            <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+          </button>
+          <button
+            className="about__btn-github"
+            onClick={() => window.open("https://github.com/modestas9k")}
+          >
+            <FontAwesomeIcon icon={["fab", "github"]} />
+          </button>
+          <button
+            className="about__btn-instagram"
+            onClick={() =>
+              window.open("https://www.instagram.com/modest.skirius/")
+            }
+          >
+            <FontAwesomeIcon icon={["fab", "instagram"]} />
+          </button>
         </div>
       </div>
     </div>
