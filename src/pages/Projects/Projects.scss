@@ -23,12 +23,19 @@
 // Buttons
 
 .project__buttons {
-  margin: 40px 0 20px 0;
+  margin: 40px auto;
+  display: flex;
+  max-width: 500px;
+  justify-content: center;
+  align-self: center;
 
+  button:first-child {
+    margin-right: 5px;
+  }
   button {
-    margin-bottom: 20px;
-    padding: 20px 40px;
-    margin-left: 10px;
+    flex: 1;
+    padding: 20px 30px;
+    //margin-left: 10px;
     letter-spacing: 1px;
     border: 1px solid$white-color;
     border-radius: 3px;
