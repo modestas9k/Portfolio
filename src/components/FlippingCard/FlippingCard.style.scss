@@ -1,12 +1,17 @@
 @import "./../../scss/variables";
 .flipp__container {
   width: 100%;
-  height: 100vh;
-  //background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  height: 80vh;
+  //background-image: linear-gradient(120deg, #f6d465bd 0%, #fd9f85a6 100%);
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   perspective: 1000px;
+  h4 {
+    font-weight: 400;
+    color: $white-color;
+  }
 }
 * {
   box-sizing: border-box;

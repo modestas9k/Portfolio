@@ -64,6 +64,7 @@ function FlippingCard() {
           <span className="text">IDEMIA 9 1213214343121 21/21</span>
         </div>
       </div>
+      <h4>Click on the card!</h4>
     </div>
   );
 }
