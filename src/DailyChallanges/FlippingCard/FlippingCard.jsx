@@ -6,6 +6,7 @@ function FlippingCard() {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="flipp__container">
+      <span className="project-number">01</span>
       <div
         className={toggle ? "flippCard flipped" : "flippCard"}
         onClick={() => setToggle(!toggle)}

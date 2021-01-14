@@ -2,7 +2,13 @@
 .flipp__container {
   width: 100%;
   height: 80vh;
-  //background-image: linear-gradient(120deg, #f6d465bd 0%, #fd9f85a6 100%);
+  overflow: hidden;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23130b1c' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%231b1331' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23241947' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%232c1e5e' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23342377' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  /* background by SVGBackgrounds.com */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13,6 +19,14 @@
     color: $white-color;
   }
 }
+.project-number {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 4em;
+  font-weight: 700;
+  color: $white-color;
+}
 * {
   box-sizing: border-box;
 }
@@ -21,6 +35,7 @@
   position: relative;
   max-width: 400px;
   min-width: 350px;
+
   width: 100%;
   height: 240px;
   transform: rotateY(0deg);
