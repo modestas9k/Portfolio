@@ -1,0 +1,98 @@
+@import "./../../scss/variables";
+
+.counter {
+  height: calc(100vh - 50px);
+  background-color: #660000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231d16dd'/%3E%3Cstop offset='1' stop-color='%23660000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%231f9da3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%231f9da3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  /* background by SVGBackgrounds.com */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-number {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 4em;
+  font-weight: 700;
+  color: $white-color;
+}
+
+// Counter title-box
+
+.counter__title-box {
+  margin: 0 auto 5em;
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+.counter__input-box {
+  display: flex;
+
+  label {
+    color: $white-color;
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    input {
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      margin-top: 5px;
+      border-radius: 50px;
+      border: none;
+      transition: 0.4s;
+      &:focus {
+        outline-style: none;
+        transition: 0.4s;
+        box-shadow: 1px 2px 6px 0px rgba(189, 189, 189, 0.45);
+      }
+    }
+  }
+}
+
+// Counter
+
+.counter__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  text-align: center;
+}
+.counter__big-numbers {
+  width: 120px;
+  span {
+    font-size: 1.2em;
+    color: $white-color;
+    font-weight: 400;
+  }
+}
+.counter__big-text {
+  font-size: 5em;
+  font-weight: 700;
+  margin: 0;
+}
+@media (max-width: 550px) {
+  .counter__wrapper {
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .counter__big-text {
+    font-size: 4em;
+  }
+  .counter__input-box {
+    label {
+      width: 90px;
+    }
+  }
+}

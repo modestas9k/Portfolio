@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./Projects.scss";
-import { FlippingCard, Card } from "./../../components";
+import { Card } from "./../../components";
+import { FlippingCard, Counter } from "./../../DailyChallanges";
 import wineImg from "./../../assets/wineSite/wineSite1.png";
 import digitalImg from "./../../assets/digitalArt/digitalArt1.png";
 import finSkaiciuokle from "./../../assets/finansuSkaiciuokle/fin1.png";
 import cardGenerator from "./../../assets/cardGenerator.png";
+//import { useHistory } from "react-router-dom";
 
 function Projects() {
-  const [courseStuff, setCourseStuff] = useState(true);
-  const [oneDays, setOneDays] = useState(false);
+  const [courseStuff, setCourseStuff] = useState(false);
+  const [oneDays, setOneDays] = useState(true);
+  //const history = useHistory();
 
   return (
     <div className="project__main">
@@ -81,8 +84,18 @@ function Projects() {
         </div>
       )}
       {oneDays && (
-        <div>
+        <div className="projects__oneDays-wrapper">
+          {/* <div className="projects__card-wrapper">
+            <div className="projects__card-header">
+              <h2>Flipping Card</h2>
+              <h2 id="dayNumber">01</h2>
+            </div>
+          </div> */}
           <FlippingCard />
+          {/* <button onClick={() => history.push("./projects/flippingCard")}>
+            Flipper
+          </button> */}
+          <Counter />
         </div>
       )}
     </div>
