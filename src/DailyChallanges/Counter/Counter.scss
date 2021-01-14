@@ -30,11 +30,13 @@
   margin: 0 auto 5em;
   text-align: center;
   h1 {
+    font-size: 4em;
     text-transform: uppercase;
   }
 }
 .counter__input-box {
   display: flex;
+  justify-content: center;
 
   label {
     color: $white-color;
@@ -89,6 +91,12 @@
   }
   .counter__big-text {
     font-size: 4em;
+  }
+  .counter__title-box {
+    margin-bottom: 40px;
+    h1 {
+      font-size: 3em;
+    }
   }
   .counter__input-box {
     label {
