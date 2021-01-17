@@ -1,43 +1,185 @@
 @import "./../../scss/variables";
 
-.header__container {
-  background: $black-linear;
-  padding: 0 10px;
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  z-index: 500;
-}
+// Side Navigation
+
 nav {
   display: flex;
-  max-width: 960px;
-  height: 100%;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  color: $white-color;
-  .nav__logo {
-    height: 40px;
-    padding: 0;
-    margin: 0 10px;
-    img {
-      height: inherit;
+  flex-direction: column;
+  justify-content: center;
+  background: #b9bbbb;
+  background: -webkit-linear-gradient(to right, #b9bbbb, $white-color);
+  background: linear-gradient(to right, #b9bbbb, $white-color);
+
+  transform: translateX(100%);
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 500;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  a {
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: $black-color;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 576px) {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    &:hover {
+      color: $primary-color;
     }
   }
-  a {
-    padding: 15px;
-    text-decoration: none;
-    color: $white-color;
-    font-weight: 500;
-    letter-spacing: 1px;
-    //text-transform: uppercase;
-    transition: 0.4s ease;
-  }
-  a:hover {
-    background: $primary-color;
+}
 
-    line-height: 2em;
-    transition: 0.4s ease;
+// Burger button
+
+.burger {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2em;
+  height: 2em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 501;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2em;
+    height: 0.25em;
+    background: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px $black-color;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: -1px;
+
+    :first-child {
+      transform: rotate(0);
+    }
+
+    :nth-child(2) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    :nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+}
+
+// when isOpen = true;
+
+.open {
+  transform: translateX(0);
+}
+.burger__open {
+  div {
+    background: $black-color;
+    box-shadow: 2px 2px 4px lighten($black-color, 20%);
+  }
+  :first-child {
+    transform: rotate(45deg);
+  }
+  :nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  :nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+// line
+
+.header__line {
+  height: 2px;
+  margin: 2em 0.2em;
+  width: 60px;
+  background: $black-color;
+  @media (max-width: 576px) {
+    margin: 2em auto;
+  }
+}
+
+// Contact Buttons
+
+.header__buttons {
+  display: flex;
+  margin-top: 1em;
+  button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 1000%;
+    border: 1px solid $black-color;
+    background: transparent;
+    color: $black-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 576px) {
+    justify-content: center;
+  }
+
+  .header__btn-linkedin {
+    &:hover {
+      color: $white-color;
+      background: #0072b1;
+      border: 1px solid #0072b1;
+    }
+  }
+  .header__btn-github {
+    &:hover {
+      color: $white-color;
+      background: #24292e;
+      border: 1px solid #24292e;
+    }
+  }
+  .header__btn-instagram {
+    &:hover {
+      color: $white-color;
+      background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+      );
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+      border: 1px solid #24292e;
+    }
+  }
+  .header__btn-mail {
+    &:hover {
+      color: $white-color;
+      background: $white-color;
+      color: $black-color;
+    }
   }
 }
