@@ -8,10 +8,11 @@ button {
   border: none;
   border-radius: 3px;
   background: #ddd;
-  &:hover {
-    background: darken(#ddd, 10%);
-    transition: 0.4s ease;
-  }
+  cursor: pointer;
+  // &:hover {
+  //   background: darken(#ddd, 10%);
+  //   transition: 0.4s ease;
+  // }
 }
 .primary {
   color: $white-color;
