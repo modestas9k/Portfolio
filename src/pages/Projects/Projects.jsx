@@ -6,11 +6,23 @@ import wineImg from "./../../assets/wineSite/wineSite1.png";
 import digitalImg from "./../../assets/digitalArt/digitalArt1.png";
 import finSkaiciuokle from "./../../assets/finansuSkaiciuokle/fin1.png";
 import cardGenerator from "./../../assets/cardGenerator.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import TrackVisibility from "react-on-screen";
 
 function Projects() {
-  const [courseStuff, setCourseStuff] = useState(false);
-  const [oneDays, setOneDays] = useState(true);
+  const [courseStuff, setCourseStuff] = useState(true);
+  const [oneDays, setOneDays] = useState(false);
+  const [isOnScreen, setOnScreen] = useState();
 
+  const flippCard = ({ isVisible }) => {
+    setOnScreen("card");
+
+    return (
+      <div id="card">
+        <FlippingCard />
+      </div>
+    );
+  };
   return (
     <div className="project__main">
       <div className="project__head">
@@ -82,10 +94,47 @@ function Projects() {
         </div>
       )}
       {oneDays && (
-        <div className="projects__oneDays-wrapper">
-          <FlippingCard />
-          <Counter />
-          <DrumKit />
+        <div className="projects__one-days-wrapper">
+          <div className="project__mini-navigation">
+            <div>
+              <h3>Navigation</h3>
+              <ol>
+                <li className={isOnScreen === "card" ? "active" : ""}>
+                  <AnchorLink href="#card" onClick={() => setOnScreen("card")}>
+                    Card
+                  </AnchorLink>
+                </li>
+                <li className={isOnScreen === "counter" ? "active" : ""}>
+                  <AnchorLink
+                    href="#counter"
+                    onClick={() => setOnScreen("counter")}
+                  >
+                    Counter
+                  </AnchorLink>
+                </li>
+                <li className={isOnScreen === "drumkit" ? "active" : ""}>
+                  <AnchorLink
+                    href="#drumkit"
+                    onClick={() => setOnScreen("drumkit")}
+                  >
+                    DrumKit
+                  </AnchorLink>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <TrackVisibility offset={300}>
+            <flippCard />
+            {/* <div id="card">
+              <FlippingCard />
+            </div> */}
+          </TrackVisibility>
+          <div id="counter">
+            <Counter />
+          </div>
+          <div id="drumkit">
+            <DrumKit />
+          </div>
         </div>
       )}
     </div>
