@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./DrumKit.scss";
-import UIfx from "uifx";
+import useSound from "use-sound";
 import clapSound from "./../../assets/DrumKit-samples/Clap.wav";
 import kickSound from "./../../assets/DrumKit-samples/Kick.wav";
 import crashSound from "./../../assets/DrumKit-samples/Crash.wav";
@@ -22,93 +22,85 @@ function DrumKit() {
   const [isLowTom, setLowTom] = useState(false);
   const [isMidTom, setMidTom] = useState(false);
 
-  const clap = new UIfx(clapSound, {
-    volume: 0.4, // number between 0.0 ~ 1.0
-    throttleMs: 100,
-  });
-  const kick = new UIfx(kickSound, {
+  const [clap] = useSound(clapSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const crash = new UIfx(crashSound, {
+
+  const [kick] = useSound(kickSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const openHat = new UIfx(openHatSound, {
+  const [crash] = useSound(crashSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const boom = new UIfx(boomSound, {
+  const [openHat] = useSound(openHatSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const ride = new UIfx(rideSound, {
+  const [boom] = useSound(boomSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const snare = new UIfx(snareSound, {
+  const [ride] = useSound(rideSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const lowTom = new UIfx(lowTomSound, {
+  const [snare] = useSound(snareSound, {
     volume: 0.4,
-    throttleMs: 100,
   });
-  const midTom = new UIfx(midTomSound, {
+  const [lowTom] = useSound(lowTomSound, {
     volume: 0.4,
-    throttleMs: 100,
+  });
+  const [midTom] = useSound(midTomSound, {
+    volume: 0.4,
   });
   const eventHandler = (key) => {
     if (key === "KeyA") {
-      clap.play();
+      clap();
       setClap(true);
       setTimeout(() => {
         setClap(false);
       }, 300);
     } else if (key === "KeyS") {
-      crash.play();
+      crash();
       setCrash(true);
       setTimeout(() => {
         setCrash(false);
       }, 300);
     } else if (key === "KeyD") {
-      kick.play();
+      kick();
       setKick(true);
       setTimeout(() => {
         setKick(false);
       }, 300);
     } else if (key === "KeyF") {
-      openHat.play();
+      openHat();
       setOpenHat(true);
       setTimeout(() => {
         setOpenHat(false);
       }, 300);
     } else if (key === "KeyG") {
-      boom.play();
+      boom();
       setBoom(true);
       setTimeout(() => {
         setBoom(false);
       }, 300);
     } else if (key === "KeyH") {
-      ride.play();
+      ride();
       setRide(true);
       setTimeout(() => {
         setRide(false);
       }, 300);
     } else if (key === "KeyJ") {
-      snare.play();
+      snare();
       setSnare(true);
       setTimeout(() => {
         setSnare(false);
       }, 300);
     } else if (key === "KeyK") {
-      lowTom.play();
+      lowTom();
       setLowTom(true);
       setTimeout(() => {
         setLowTom(false);
       }, 300);
     } else if (key === "KeyL") {
-      midTom.play();
+      midTom();
       setMidTom(true);
       setTimeout(() => {
         setMidTom(false);
@@ -120,7 +112,6 @@ function DrumKit() {
     const onKeyDown = ({ code }) => {
       eventHandler(code);
     };
-
     document.addEventListener("keydown", onKeyDown);
 
     return () => {
