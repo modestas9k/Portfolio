@@ -5,6 +5,9 @@
 .project__main {
   background-image: $black-linear;
   min-height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 // Header
@@ -45,14 +48,15 @@
     outline: none;
 
     &:hover {
-      background: $white-color;
-      color: $black-color;
-      border: 1px solid $white-color;
+      background: $primary-color;
+
+      border: 1px solid $primary-color;
       transition: 0.4s ease;
     }
   }
   .btn_active {
-    background: $primary-color;
-    border: 1px solid $primary-color;
+    background: $white-color;
+    border: 1px solid $white-color;
+    color: $black-color;
   }
 }

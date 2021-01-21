@@ -1,0 +1,80 @@
+@import "./../../scss/variables";
+
+// header
+
+.project__head {
+  text-align: center;
+  padding-top: 100px;
+}
+
+//
+// One days projects
+//
+
+html {
+  scroll-behavior: smooth;
+}
+.project__one-days--wrapper {
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  :nth-child(1) {
+    scroll-snap-align: center;
+  }
+}
+
+//
+// mini navigation
+//
+
+.project__mini-navigation {
+  position: fixed;
+  //position: relative;
+  top: 7em;
+  right: 2em;
+  z-index: 200;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(245, 245, 245, 0.1);
+  //background: inherit;
+  padding: 1em;
+  border-radius: 5px;
+  //text-align: start;
+  overflow: hidden;
+
+  h3 {
+    color: $white-color;
+  }
+  ol {
+    padding: 0 20px;
+  }
+  li,
+  a {
+    text-decoration: none;
+    color: $white-color;
+    line-height: 1.4em;
+    letter-spacing: 0.015em;
+  }
+  li:hover {
+    color: $primary-color;
+    a {
+      color: $primary-color;
+    }
+  }
+
+  @media (max-width: 750px) {
+  }
+  .active {
+    color: $primary-color;
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+.one-day__testing {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+}
