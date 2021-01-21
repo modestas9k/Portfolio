@@ -21,9 +21,9 @@ function Counter() {
   };
 
   const [guestData, setGuestData] = useState({
-    year: 2021,
+    year: 2022,
     month: 1,
-    day: 20,
+    day: 1,
   });
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
