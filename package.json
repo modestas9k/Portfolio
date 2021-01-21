@@ -14,10 +14,12 @@
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
+    "react-on-screen": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.0",
-    "uifx": "^2.0.7"
+    "use-sound": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
