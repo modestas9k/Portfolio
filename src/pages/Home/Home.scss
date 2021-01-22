@@ -1,3 +1,5 @@
+@import "./../../scss/variables";
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -8,6 +10,42 @@
   text-align: center;
   color: whitesmoke;
   strong {
-    color: #16a085;
+    color: $primary-color;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+    letter-spacing: 0.3em;
+  }
+}
+.home__button {
+  background: transparent;
+  border: 1px solid $white-color;
+  border-radius: 0;
+  color: $white-color;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  position: relative;
+  z-index: 2;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $white-color;
+    transition: all 0.3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: $black-color;
+  }
+  &:hover::after {
+    width: 100%;
   }
 }

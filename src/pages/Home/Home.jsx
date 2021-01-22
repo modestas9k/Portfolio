@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import { Button } from "./../../components";
 import { useHistory } from "react-router-dom";
 
 function Home() {
@@ -12,12 +11,13 @@ function Home() {
           <h1>
             Hello, I'm <strong>Modestas Skirius</strong>.
           </h1>
-          <h1>Front-End Developer</h1>
-          <Button
-            text="View my work"
-            type="primary"
-            handleClick={() => history.push("/projects")}
-          />
+          <p>Front-End Developer</p>
+          <button
+            className="home__button"
+            onClick={() => history.push("/projects")}
+          >
+            View work
+          </button>
         </div>
       </section>
     </>
