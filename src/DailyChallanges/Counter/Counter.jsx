@@ -97,25 +97,25 @@ function Counter() {
       </div>
       {!isEmpty(timeLeft) && (
         <div className="counter__wrapper">
-          <div className="counter__big-numbers days">
+          <div className="counter__big-numbers-box">
             <p className="counter__big-text" id="days">
               {timeLeft.days}
             </p>
             <span>days</span>
           </div>
-          <div className="counter__big-numbers hours">
+          <div className="counter__big-numbers-box">
             <p className="counter__big-text" id="hours">
               {timeLeft.hours}
             </p>
             <span>hours</span>
           </div>
-          <div className="counter__big-numbers mins">
+          <div className="counter__big-numbers-box">
             <p className="counter__big-text" id="mins">
               {formatTime(timeLeft.minutes)}
             </p>
             <span>mins</span>
           </div>
-          <div className="counter__big-numbers seconds">
+          <div className="counter__big-numbers-box">
             <p className="counter__big-text" id="seconds">
               {formatTime(timeLeft.seconds)}
             </p>
