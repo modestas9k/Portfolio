@@ -34,28 +34,30 @@ function ShowWork() {
         <div className="showWork__container">
           <div className="showWork__image-wrapper">
             {project.images &&
-              project.images.map((obj) => {
-                return (
-                  <div key={obj.id}>
-                    <img src={obj.src} alt={obj.alt} />
-                  </div>
-                );
-              })}
+              project.images.map((obj) => (
+                <img
+                  className="showWork__image-wrapper--image"
+                  key={obj.id}
+                  src={obj.src}
+                  alt={obj.alt}
+                />
+              ))}
           </div>
-          <div>
+          <div className="showWork__text">
             <h1>{project.title}</h1>
-            <p>{project.description}</p>
-            <div className="showWork__chip-box">
+            <p className="showWork__text--description">{project.description}</p>
+            <div className="showWork__text--chips-wrapper">
               {project.chips &&
-                project.chips.map((chip) => {
-                  return (
-                    <div className="showWork__chip" key={chip}>
-                      {chip}
-                    </div>
-                  );
-                })}
+                project.chips.map((chip) => (
+                  <div
+                    className="showWork__text--chips-wrapper--chip"
+                    key={chip}
+                  >
+                    {chip}
+                  </div>
+                ))}
             </div>
-            <div className="showWork__buttons">
+            <div className="showWork__text--buttons">
               {project.gitHub && (
                 <Button
                   type="gitHub"
@@ -66,7 +68,6 @@ function ShowWork() {
               {project.website && (
                 <Button
                   text="Website"
-                  type="transparent"
                   handleClick={() => window.open(project.website)}
                 />
               )}
