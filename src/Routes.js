@@ -2,12 +2,9 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Header } from "./components";
-import { Home } from "./pages";
+import { Home, ShowWork } from "./pages";
 const AboutLazy = lazy(() => import(`./pages/About/About`));
 const ProjectsLazy = lazy(() => import(`./pages/Projects/Projects`));
-const OneDayChallengeLazy = lazy(() =>
-  import(`./pages/OneDaysChallenge/OneDayChallenge`)
-);
 
 function Routes() {
   return (
@@ -18,11 +15,7 @@ function Routes() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={AboutLazy} />
           <Route exact path="/projects" component={ProjectsLazy} />
-          <Route
-            exact
-            path="/oneDayChallenges"
-            component={OneDayChallengeLazy}
-          />
+          <Route exact path="/projects/:id" component={ShowWork} />
         </Switch>
       </Suspense>
     </Router>

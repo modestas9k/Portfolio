@@ -24,7 +24,7 @@
 .about__main--image-box {
   border-radius: 10px;
   overflow: hidden;
-  background-image: url("./../../assets/me-500px.jpg");
+  background-image: url("/assets/me-500px.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 400px;
@@ -45,7 +45,7 @@
   }
   .about__main--image-box {
     align-self: center;
-    background-image: url("./../../assets/me-small.jpg");
+    background-image: url("/assets/me-small.jpg");
     width: 200px;
     min-height: 300px;
     border-radius: 1000px;

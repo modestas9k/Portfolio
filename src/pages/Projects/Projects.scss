@@ -1,65 +1,55 @@
 @import "./../../scss/variables";
 
-// Projects page body
-
-.project__main {
-  background-image: $black-linear;
-  min-height: 100vh;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-// Header
-
-.project__head {
-  text-align: center;
-  padding-top: 100px;
-}
-
-// Cards wrapper
-
-.project__card-wrapper {
+.projects__container {
+  padding: 1em;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
-// Buttons
+// head
 
-.project__buttons {
-  margin: 40px auto;
-  display: flex;
-  max-width: 500px;
-  justify-content: center;
-  align-self: center;
-
-  button:first-child {
-    margin-right: 5px;
-  }
+.projects__head {
+  text-align: center;
+}
+.projects__head--buttons {
   button {
-    flex: 1;
-    padding: 20px 30px;
-    //margin-left: 10px;
-    letter-spacing: 1px;
-    border: 1px solid$white-color;
-    border-radius: 3px;
-    color: $white-color;
-    background: transparent;
-    transition: 0.4s ease;
-    outline: none;
-
-    &:hover {
-      background: $primary-color;
-
-      border: 1px solid $primary-color;
-      transition: 0.4s ease;
-    }
+    margin: 5px;
   }
-  .btn_active {
-    background: $white-color;
-    border: 1px solid $white-color;
-    color: $black-color;
+}
+
+// main
+
+.projects__main {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projects__main--card {
+  width: calc(100% - 30px);
+  max-width: 400px;
+  max-height: 250px;
+  margin: 15px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(32, 32, 32);
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  @media (max-width: 550px) {
-    margin: 40px 20px;
+  h4 {
+    margin-top: 5px;
+  }
+  @media (min-width: 700px) {
+    width: calc(50% - 30px);
+  }
+  @media (min-width: 900px) {
+    width: calc(33% - 30px);
   }
 }
