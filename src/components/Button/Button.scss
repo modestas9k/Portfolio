@@ -27,31 +27,38 @@ button {
   background: transparent;
   border: 1px solid $white-color;
   color: $white-color;
+}
+.active {
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  color: $white-color;
+}
+.gitHub {
+  background: transparent;
+  border: none;
+  color: #fafafa;
+  border: 1px solid $white-color;
+
+  svg {
+    margin-right: 8px;
+  }
   &:hover {
     background: $primary-color;
     border: 1px solid $primary-color;
     color: $white-color;
   }
 }
-.gitHub {
-  background: transparent;
-  border: none;
-  color: #fafafa;
-  svg {
-    margin-right: 8px;
-  }
-  &:hover {
-    background: $primary-color;
-  }
-}
 .default {
   background: transparent;
   border: none;
   color: #fafafa;
+  border: 1px solid $white-color;
   svg {
     margin-right: 8px;
   }
   &:hover {
-    background: $primary-color;
+    background: darken($color: $primary-color, $amount: 5);
+    border: 1px solid $primary-color;
+    color: $white-color;
   }
 }

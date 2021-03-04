@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Button.scss";
 
-function Button({ text, type, handleClick, className }) {
+function Button({ text, type, handleClick, active }) {
   switch (type) {
     case "primary":
       return (
@@ -14,7 +14,10 @@ function Button({ text, type, handleClick, className }) {
 
     case "transparent":
       return (
-        <button onClick={handleClick} className="transparent">
+        <button
+          onClick={handleClick}
+          className={active ? "active transparent" : "transparent"}
+        >
           {text}
         </button>
       );
