@@ -16,6 +16,11 @@
     margin: 5px;
   }
 }
+@media (max-width: 425px) {
+  .projects__head h1 {
+    margin-top: 2em;
+  }
+}
 
 // main
 
@@ -36,16 +41,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(32, 32, 32);
+  box-shadow: 10px 10px 27px -10px black;
+  transition: all 0.4s cubic-bezier(0.05, 0.6, 0.76, 1.48);
   cursor: pointer;
+  
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  h4 {
-    margin-top: 5px;
-  }
+
   @media (min-width: 700px) {
     width: calc(50% - 30px);
   }
@@ -53,3 +58,6 @@
     width: calc(33% - 30px);
   }
 }
+.projects__main--card:hover {
+    transform:scale(1.02)
+  }

@@ -3,7 +3,7 @@
 button {
   padding: 10px 20px;
   box-sizing: border-box;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   letter-spacing: 1px;
   border: none;
   border-radius: 3px;
@@ -27,6 +27,9 @@ button {
   background: transparent;
   border: 1px solid $white-color;
   color: $white-color;
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 .active {
   background: $primary-color;
