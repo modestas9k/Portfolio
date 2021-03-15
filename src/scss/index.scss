@@ -12,7 +12,16 @@ body {
     color: $white-color;
   }
   h1 {
-    font-size: 3em;
+    font-size: 7em;
+    text-transform: uppercase;
+    text-shadow: 7px 6px 9px #161616;
+
+    @media (max-width: 768px) {
+      font-size: 4em
+    }
+    @media (max-width: 525px) {
+      font-size: 3em;
+    }
   }
   h2 {
     font-size: 2em;
@@ -30,3 +39,4 @@ body {
 html {
   background: $black-color;
 }
+
