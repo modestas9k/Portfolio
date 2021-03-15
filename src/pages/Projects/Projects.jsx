@@ -1,36 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Projects.scss";
 import { Button } from "../../components";
 import projectsData from "../../projectsData";
 import { useHistory } from "react-router-dom";
+import { ProjectContext } from "../../contexts/ProjectContext";
 
 function ProjectPage() {
   const [projects, setProjects] = useState();
-  const [projectType, setProjectType] = useState({
-    study: true,
-    oneDay: true,
-    project: true,
-  });
+  const { projectsGroup, setProjectsGroup } = useContext(ProjectContext);
   const history = useHistory();
 
   useEffect(() => {
     let newArr = [];
-    if (projectType.project) {
-      let oneDayArr = projectsData.filter((obj) => obj.type === "projects");
-      oneDayArr.forEach((obj) => newArr.push(obj));
+    if (projectsGroup === "all") {
+      projectsData.forEach((obj) => newArr.push(obj));
     }
-    if (projectType.oneDay) {
-      let oneDayArr = projectsData.filter(
-        (obj) => obj.type === "oneDayChallenge"
+    if (projectsGroup !== "all") {
+      let filteredData = projectsData.filter(
+        (obj) => obj.type === projectsGroup
       );
-      oneDayArr.forEach((obj) => newArr.push(obj));
-    }
-    if (projectType.study) {
-      let studyArr = projectsData.filter((obj) => obj.type === "studyProjects");
-      studyArr.forEach((obj) => newArr.push(obj));
+      filteredData.forEach((obj) => newArr.push(obj));
     }
     setProjects(newArr);
-  }, [projectType]);
+  }, [projectsGroup]);
 
   return (
     <div className="projects__container">
@@ -38,38 +30,26 @@ function ProjectPage() {
         <h1>Projects</h1>
         <div className="projects__head--buttons">
           <Button
-            handleClick={() => {
-              setProjects(projectsData.studyProjects);
-              setProjectType({
-                ...projectType,
-                project: !projectType.project,
-              });
-            }}
-            active={projectType.project}
+            handleClick={() => setProjectsGroup("all")}
+            active={projectsGroup === "all"}
+            type="transparent"
+            text="All"
+          />
+          <Button
+            handleClick={() => setProjectsGroup("projects")}
+            active={projectsGroup === "projects"}
             type="transparent"
             text="Projects"
           />
           <Button
-            handleClick={() => {
-              setProjects(projectsData.studyProjects);
-              setProjectType({
-                ...projectType,
-                oneDay: !projectType.oneDay,
-              });
-            }}
-            active={projectType.oneDay}
+            handleClick={() => setProjectsGroup("oneDayChallenge")}
+            active={projectsGroup === "oneDayChallenge"}
             type="transparent"
             text="One Day Challenge"
           />
           <Button
-            handleClick={() => {
-              setProjects(projectsData.studyProjects);
-              setProjectType({
-                ...projectType,
-                study: !projectType.study,
-              });
-            }}
-            active={projectType.study}
+            handleClick={() => setProjectsGroup("studyProjects")}
+            active={projectsGroup === "studyProjects"}
             type="transparent"
             text="Study Projects"
           />
