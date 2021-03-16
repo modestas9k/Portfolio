@@ -9,10 +9,6 @@ button {
   border-radius: 3px;
   background: #ddd;
   cursor: pointer;
-  // &:hover {
-  //   background: darken(#ddd, 10%);
-  //   transition: 0.4s ease;
-  // }
 }
 .primary {
   color: $white-color;
@@ -24,17 +20,17 @@ button {
   }
 }
 .transparent {
-  background: transparent;
-  border: 1px solid $white-color;
+  background:rgba($white-color, 0.1);
   color: $white-color;
+  box-shadow:  5px 5px 20px -10px #09342ca4;
   &:hover {
     transform: scale(1.03);
   }
 }
 .active {
-  background: $primary-color;
-  border: 1px solid $primary-color;
+  background: rgba($primary-color, 0.6);
   color: $white-color;
+  box-shadow:  5px 5px 20px -10px #09342c;
 }
 .gitHub {
   background: transparent;
