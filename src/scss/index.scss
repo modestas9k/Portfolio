@@ -11,10 +11,27 @@ body {
     font-weight: 700;
     color: $white-color;
   }
+
+	// background: linear-gradient(-45deg, #ee7752, #bf3ce7, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg,  #CC1B1B, #CCC91B , #115580,#0680CC, );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   h1 {
     font-size: 7em;
     text-transform: uppercase;
-    text-shadow: 7px 6px 9px #161616;
+    text-shadow: 7px 6px 9px #38383857;
 
     @media (max-width: 768px) {
       font-size: 4em
